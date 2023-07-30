@@ -80,7 +80,7 @@ const Img = styled.img`
 
     @keyframes animate {
         to {
-            transform: translateY(20px);
+            transform: translateY(50px);
         }
     }
 `;
@@ -101,7 +101,7 @@ const Hero = () => {
             </Left>
             <Right>
                 {/* 3d model */}
-                <Img src="./img/moon.png" alt="" />
+                <Img src="./img/hikoushi.png" alt="" />
             </Right>
         </Container>
     </Section>
