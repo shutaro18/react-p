@@ -11,7 +11,7 @@ const Container = styled.div`
  overflow-y: auto;
  scrollbar-width: none; // Firefox
  color: white;
- background: url("./img/bg.jpeg");
+ background: url("./img/bg5.jpg");
  &::-webkit-scrollbar {
     display: none; // Safari + Chrome
   }

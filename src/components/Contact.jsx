@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import Map from './Map'
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import styled from "styled-components";
+import Map from "./Map";
 
 
 const Section = styled.div`
@@ -22,6 +23,10 @@ const Left = styled.div`
   align-items: center;
   justify-content: flex-end;
 
+  @media only screen and (max-width: 768px){
+    justify-content: center;
+  }
+
 `;
 
 const Title = styled.h1`
@@ -33,6 +38,11 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media only screen and (max-width: 768px){
+   width: 300px;
+  }
+
 `;
 
 const Input = styled.input`
@@ -62,19 +72,40 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px){
+    display: none;
+  }
 `;
 
 const Contact = () => {
+  const ref = useRef();
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+    emailjs.sendForm('service_1bosbio', 'template_oow4f9h', ref.current, 'Q9dsqG6M1laaTbPcX')
+    .then((result) => {
+        console.log(result.text);
+        setSuccess(true);
+    }, (error) => {
+        console.log(error.text);
+        setSuccess(false);
+    });
+};
   return (
     <Section>
       <Container>
         <Left>
-          <Form>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <TextArea placeholder="Message" rows={10}/>
-            <Button>Send</Button>
+            <Input placeholder="Name" name="name"/>
+            <Input placeholder="Email" name="email"/>
+            <TextArea placeholder="Message" name="message" rows={10}/>
+            <Button type="submit">Send</Button>
+            {success &&
+            "メッセージが送信されました。折り返しご連絡いたします。"}
           </Form>
         </Left>
         <Right>
