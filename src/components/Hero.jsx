@@ -84,15 +84,15 @@ const Desc = styled.p`
     }
 `;
 
-const Button = styled.button`
-    background-color: #da4ea2;
-    color: white;
-    font-weight: 500;
-    width: 100px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-`;
+// const Button = styled.button`
+//     background-color: #da4ea2;
+//     color: white;
+//     font-weight: 500;
+//     width: 100px;
+//     padding: 10px;
+//     border-radius: 5px;
+//     cursor: pointer;
+// `;
 
 const Right = styled.div`
     flex: 3;
@@ -134,22 +134,22 @@ const Hero = () => {
         <Navbar/>
         <Container>
             <Left>
-                <Title>Think. Make. Solve.</Title>
+                <Title id="home">Reactで作ったサイトです。</Title>
                 <WhatWeDo>
                     <Line src="/img/line.png"/>
-                    <Subtitle>What we Do</Subtitle>
+                    <Subtitle>使った技術</Subtitle>
                 </WhatWeDo>
-                <Desc>aaaaaaaaaaaaaaaaaaaaaaaaaaa</Desc>
-                <Button>Learn more</Button>
+                <Desc>HTML  CSS React.js Three.js React Simple Maps Emailjs Sketchfab Vercel</Desc>
+                {/* <Button>Learn more</Button> */}
             </Left>
             <Right>
                 <Canvas>
                     <OrbitControls enableZoom={false} />
                     <ambientLight intensity={1} />
                     <directionalLight position={[3, 2, 1]} />
-                    <Sphere args={[1,100,200]} scale={2.5}>
+                    <Sphere args={[1,100,200]} scale={2.4}>
                         <MeshDistortMaterial
-                        color="#15156a"
+                        color="#000b8b"
                         attach="material"
                         distort={0.5}
                         speed={2}

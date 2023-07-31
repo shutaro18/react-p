@@ -104,7 +104,7 @@ const Works = () => {
     <Section>
       <Container>
         <Left>
-          <List>
+          <List id="skills">
             {data.map((item) => (
               <ListItem key={item} text={item} onClick={()=>setWork(item)}>
                 {item}

@@ -70,15 +70,15 @@ const Desc = styled.p`
     color: lightgray;
 `;
 
-const Button = styled.button`
-    background-color: #da4ea2;
-    color: white;
-    font-weight: 500;
-    width: 120px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-`;
+// const Button = styled.button`
+//     background-color: #da4ea2;
+//     color: white;
+//     font-weight: 500;
+//     width: 120px;
+//     padding: 10px;
+//     border-radius: 5px;
+//     cursor: pointer;
+// `;
 
 
 const Who = () => {
@@ -94,13 +94,13 @@ const Who = () => {
                 </Canvas>
             </Left>
             <Right>
-                <Title>Think. Make. Solve.</Title>
+                <Title id="threejs">Three.js</Title>
                 <WhatWeDo>
                     <Line src="/img/line.png"/>
-                    <Subtitle>What we Are</Subtitle>
+                    <Subtitle>マウスで立体的に動かせる。</Subtitle>
                 </WhatWeDo>
-                <Desc>bbbbbbbbbbbbbbbbbb</Desc>
-                <Button>See our works</Button>
+                <Desc>Three.jsを使用して、マウス操作で立体的な動きを楽しむことができます。Three.jsは、Webブラウザ上で3Dグラフィックスを作成するためのJavaScriptライブラリであり、直感的なマウス操作によって立体的な世界を自由に探索できます。立体的なモデルの回転やズームイン・ズームアウトをマウスの動きでコントロールすることで、没入感溢れるリッチな体験を提供します。3Dアートやゲーム開発、可視化など様々な分野で利用され、創造的な表現が可能となっています。</Desc>
+                {/* <Button>See our works</Button> */}
 
             </Right>
         </Container>
