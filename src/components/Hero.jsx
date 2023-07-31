@@ -78,7 +78,7 @@ const Desc = styled.p`
     color: lightgray;
 
     @media only screen and (max-width: 768px){
-        display: none;
+        font-size: 18px;
         padding: 20px;
         text-align: center;
     }
